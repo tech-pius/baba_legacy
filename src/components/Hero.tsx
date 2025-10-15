@@ -14,9 +14,11 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
     >
-      {/* Animated background effect */}
+      {/* Animated parallax background effect */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-[200%] h-[200%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-radial from-primary/10 via-transparent to-transparent animate-float" />
+        <div className="absolute w-[200%] h-[200%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-radial from-primary/10 via-transparent to-transparent animate-float" style={{ animationDuration: "20s" }} />
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(231,76,60,0.08),transparent_50%)] animate-float" style={{ animationDuration: "25s", animationDelay: "2s" }} />
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(243,156,18,0.06),transparent_50%)] animate-float" style={{ animationDuration: "30s", animationDelay: "5s" }} />
       </div>
 
       {/* Content */}

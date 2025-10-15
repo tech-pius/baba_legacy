@@ -7,6 +7,7 @@ const navItems = [
   { label: "Early Life", href: "#early-life" },
   { label: "Political Journey", href: "#political-journey" },
   { label: "Achievements", href: "#achievements" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Legacy", href: "#legacy" },
   { label: "Support", href: "#support" },
 ];
