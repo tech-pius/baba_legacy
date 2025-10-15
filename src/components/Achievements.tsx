@@ -46,12 +46,12 @@ export const Achievements = () => {
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Major Achievements
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-inter">
             A legacy of transformation, reform, and unwavering dedication to the people
           </p>
         </div>
@@ -73,12 +73,12 @@ export const Achievements = () => {
                     <div className="text-sm text-primary font-semibold mb-1">
                       {achievement.years}
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="text-xl font-bold text-foreground font-playfair">
                       {achievement.title}
                     </h3>
                   </div>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-inter">
                   {achievement.description}
                 </p>
               </div>

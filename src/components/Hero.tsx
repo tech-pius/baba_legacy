@@ -26,28 +26,28 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left space-y-6 animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-playfair leading-tight">
               <span className="block text-foreground mb-2">RAILA AMOLO</span>
               <span className="block bg-gradient-primary bg-clip-text text-transparent animate-glow-pulse">
                 ODINGA
               </span>
             </h1>
             
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground/90">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light font-playfair text-foreground/90">
               The People's Champion
             </h2>
             
-            <div className="text-xl md:text-2xl font-semibold text-primary">
+            <div className="text-xl md:text-2xl font-semibold font-playfair text-primary">
               1945 - 2025
             </div>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 italic">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 italic font-inter">
               "A lifetime dedicated to democracy, justice, and the dreams of millions"
             </p>
 
             <div className="pt-4">
               <div className="inline-block px-6 py-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border shadow-card">
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground font-inter">
                   In Memory of Kenya's Champion of Democracy
                 </p>
               </div>
