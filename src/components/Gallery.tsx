@@ -8,7 +8,7 @@ import africanunion from "/src/assets/africanunion.jpg";
 import world from "/src/assets/world.jpg";
 import rally from "/src/assets/rally.jpg";
 import family from "/src/assets/family.jpg";
-import placeholder from "/src/assets/placeholder.jpg";
+
 
 const galleryItems = [
   { title: "Prime Minister Swearing-In Ceremony", year: "2008", description: "Historic moment as Kenya's second Prime Minister", image: swearing },
