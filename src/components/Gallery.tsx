@@ -1,55 +1,24 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import swearing from "/src/assets/swearing.jpg";
+import handshake from "/src/assets/handshake.jpg";
+import const2010 from "/src/assets/const2010.jpg";
+import campaign from "/src/assets/campaign.jpg";
+import africanunion from "/src/assets/africanunion.jpg";
+import world from "/src/assets/world.jpg";
+import rally from "/src/assets/rally.jpg";
+import family from "/src/assets/family.jpg";
+import placeholder from "/src/assets/placeholder.jpg";
 
 const galleryItems = [
-  {
-    title: "Prime Minister Swearing-In Ceremony",
-    year: "2008",
-    description: "Historic moment as Kenya's second Prime Minister",
-    image: "/src/assets/swearing.jpg",
-  },
-  {
-    title: "The Handshake with President Uhuru",
-    year: "2018",
-    description: "A moment that changed Kenya's political landscape",
-    image: "/src/assets/handshake.jpg",
-  },
-  {
-    title: "2010 Constitution Promulgation",
-    year: "2010",
-    description: "Celebrating Kenya's new constitution",
-    image: "/src/assets/const2010.jpg",
-  },
-  {
-    title: "Campaign Trail",
-    year: "2017",
-    description: "Connecting with supporters across Kenya",
-    image: "/src/assets/campaign.jpg",
-  },
-  {
-    title: "African Union Commission Chairperson Campaign",
-    year: "2017",
-    description: "Taking his vision to continental level",
-    image: "/src/assets/africanunion.jpg",
-  },
-  {
-    title: "Meeting with World Leaders",
-    year: "2010s",
-    description: "Representing Kenya on the global stage",
-    image: "/src/assets/world.jpg",
-  },
-  {
-    title: "Political Rallies",
-    year: "1990s-2020s",
-    description: "The voice of the people",
-    image: "/src/assets/rally.jpg",
-  },
-  {
-    title: "With His Family",
-    year: "Various",
-    description: "A devoted family man",
-    image: "/src/assets/family.jpg",
-  },
+  { title: "Prime Minister Swearing-In Ceremony", year: "2008", description: "Historic moment as Kenya's second Prime Minister", image: swearing },
+  { title: "The Handshake with President Uhuru", year: "2018", description: "A moment that changed Kenya's political landscape", image: handshake },
+  { title: "2010 Constitution Promulgation", year: "2010", description: "Celebrating Kenya's new constitution", image: const2010 },
+  { title: "Campaign Trail", year: "2017", description: "Connecting with supporters across Kenya", image: campaign },
+  { title: "African Union Commission Chairperson Campaign", year: "2017", description: "Taking his vision to continental level", image: africanunion },
+  { title: "Meeting with World Leaders", year: "2010s", description: "Representing Kenya on the global stage", image: world },
+  { title: "Political Rallies", year: "1990s-2020s", description: "The voice of the people", image: rally },
+  { title: "With His Family", year: "Various", description: "A devoted family man", image: family },
 ];
 
 export const Gallery = () => {
@@ -98,7 +67,7 @@ export const Gallery = () => {
                 alt={item.title}
                 className="absolute inset-0 w-full h-full object-cover"
                 onError={(e) => {
-                  e.currentTarget.src = "/src/assets/placeholder.jpg"; // Optional: Fallback image
+                  e.currentTarget.src = placeholder; // Use imported placeholder
                 }}
               />
 
@@ -138,7 +107,7 @@ export const Gallery = () => {
               alt={galleryItems[selectedImage].title}
               className="aspect-video w-full rounded-xl object-cover"
               onError={(e) => {
-                e.currentTarget.src = "/src/assets/placeholder.jpg"; // Optional: Fallback image
+                e.currentTarget.src = placeholder; // Use imported placeholder
               }}
             />
             <div className="text-center mt-6">
