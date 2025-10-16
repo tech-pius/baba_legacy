@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
 
+// Optional: Import react-helmet for dynamic meta tags (install: npm install react-helmet)
+import { Helmet } from "react-helmet"; // Uncomment and install if using
+
 export const Support = () => {
   const [copied, setCopied] = useState(false);
   const mpesaNumber = "0706748425";
@@ -15,8 +18,8 @@ export const Support = () => {
   };
 
   const shareToSocial = (platform: string) => {
-    const url = window.location.href;
-    const text = "Honoring Raila Amolo Odinga - A Legacy of Courage and Democracy";
+    const url = `${window.location.origin}/support`; // Specific to Support section
+    const text = "Support the Raila Odinga Tribute - Donate via M-Pesa & Share His Legacy!";
     
     const urls = {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
@@ -45,14 +48,14 @@ export const Support = () => {
           </h2>
 
           <p className="text-xl text-muted-foreground mb-8 animate-fade-in font-inter">
-            If you appreciate this memorial website honoring Raila Odinga's legacy, consider buying me a coffee. Your support helps maintain and improve this tribute.
+            If you cherish this memorial to Raila Odinga's legacy—his fight for democracy, the 2018 Handshake, and the 2010 Constitution—consider buying me a coffee. Your support keeps this tribute alive and growing.
           </p>
 
           {/* Share Section */}
           <div className="mb-8 animate-fade-in-up">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Share2 className="w-5 h-5 text-muted-foreground" />
-              <p className="text-sm text-muted-foreground font-inter">Share this memorial</p>
+              <p className="text-sm text-muted-foreground font-inter">Spread the Word</p>
             </div>
             <div className="flex justify-center gap-3">
               <Button
@@ -60,6 +63,7 @@ export const Support = () => {
                 variant="outline"
                 size="icon"
                 className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/10"
+                aria-label="Share on Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </Button>
@@ -68,6 +72,7 @@ export const Support = () => {
                 variant="outline"
                 size="icon"
                 className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/10"
+                aria-label="Share on Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </Button>
@@ -76,6 +81,7 @@ export const Support = () => {
                 variant="outline"
                 size="icon"
                 className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/10"
+                aria-label="Share on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </Button>
@@ -96,6 +102,7 @@ export const Support = () => {
                   variant="outline"
                   size="lg"
                   className="border-primary/50 hover:bg-primary hover:text-primary-foreground transition-all font-inter"
+                  aria-label="Copy M-Pesa number"
                 >
                   {copied ? (
                     <>
@@ -115,19 +122,31 @@ export const Support = () => {
             <div className="pt-6 border-t border-border">
               <div className="flex items-center justify-center gap-2 text-muted-foreground">
                 <Coffee className="w-5 h-5" />
-                <p className="text-lg font-inter">Every contribution is greatly appreciated</p>
+                <p className="text-lg font-inter">Every contribution fuels this tribute</p>
               </div>
             </div>
           </div>
 
           <div className="mt-12 p-6 bg-card/30 backdrop-blur-sm rounded-xl border border-border animate-fade-in-up">
             <p className="text-sm text-muted-foreground font-inter">
-              This tribute website was created to honor the memory and legacy of Raila Amolo Odinga, 
-              a true champion of Kenyan democracy. Thank you for visiting and keeping his memory alive.
+              This tribute celebrates Raila Amolo Odinga—Baba—whose courage shaped Kenya’s democracy. Your support helps preserve his memory. Thank you! 🇰🇪
             </p>
           </div>
         </div>
       </div>
+
+      {/* Optional: Dynamic Meta Tags with react-helmet */}
+      {/* Uncomment and install react-helmet if using SSR or client-side routing */}
+      {/* <Helmet>
+        <title>Support Raila Odinga Tribute - Donate Now</title>
+        <meta name="description" content="Support the memorial website for Raila Odinga with a M-Pesa donation. Keep his legacy alive!" />
+        <meta property="og:title" content="Support Raila Odinga Tribute" />
+        <meta property="og:description" content="Donate via M-Pesa to support this tribute to Raila Odinga’s legacy." />
+        <meta property="og:image" content={`${window.location.origin}/assets/support-og.jpg`} />
+        <meta name="twitter:title" content="Support Raila Odinga Tribute" />
+        <meta name="twitter:description" content="Help maintain this tribute with a M-Pesa donation." />
+        <meta name="twitter:image" content={`${window.location.origin}/assets/support-og.jpg`} />
+      </Helmet> */}
     </section>
   );
 };
