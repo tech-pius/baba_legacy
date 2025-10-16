@@ -18,7 +18,7 @@ export const Support = () => {
   };
 
   const shareToSocial = (platform: string) => {
-    const url = `${window.location.origin}/support`; // Specific to Support section
+    const url = `${window.location.origin}`; // Specific to Support section
     const text = "Support the Raila Odinga Tribute - Donate via M-Pesa & Share His Legacy!";
     
     const urls = {
