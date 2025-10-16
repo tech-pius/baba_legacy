@@ -28,7 +28,7 @@ export const Footer = () => {
               <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/PiusdenisTech"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-card/50 hover:bg-primary/10 border border-border hover:border-primary/50 rounded-full flex items-center justify-center transition-all"
@@ -36,7 +36,7 @@ export const Footer = () => {
               <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/pius-denis-b42b53367/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-card/50 hover:bg-primary/10 border border-border hover:border-primary/50 rounded-full flex items-center justify-center transition-all"
@@ -44,7 +44,7 @@ export const Footer = () => {
               <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="piusdenistech@gmail.com"
               className="w-10 h-10 bg-card/50 hover:bg-primary/10 border border-border hover:border-primary/50 rounded-full flex items-center justify-center transition-all"
             >
               <Mail className="w-5 h-5 text-muted-foreground hover:text-primary" />

@@ -6,41 +6,49 @@ const galleryItems = [
     title: "Prime Minister Swearing-In Ceremony",
     year: "2008",
     description: "Historic moment as Kenya's second Prime Minister",
+    image: "/src/assets/swearing.jpg",
   },
   {
     title: "The Handshake with President Uhuru",
     year: "2018",
     description: "A moment that changed Kenya's political landscape",
+    image: "/src/assets/handshake.jpg",
   },
   {
     title: "2010 Constitution Promulgation",
     year: "2010",
     description: "Celebrating Kenya's new constitution",
+    image: "/src/assets/const2010.jpg",
   },
   {
     title: "Campaign Trail",
     year: "2017",
     description: "Connecting with supporters across Kenya",
+    image: "/src/assets/campaign.jpg",
   },
   {
     title: "African Union Commission Chairperson Campaign",
     year: "2017",
     description: "Taking his vision to continental level",
+    image: "/src/assets/africanunion.jpg",
   },
   {
     title: "Meeting with World Leaders",
     year: "2010s",
     description: "Representing Kenya on the global stage",
+    image: "/src/assets/world.jpg",
   },
   {
     title: "Political Rallies",
     year: "1990s-2020s",
     description: "The voice of the people",
+    image: "/src/assets/rally.jpg",
   },
   {
     title: "With His Family",
     year: "Various",
     description: "A devoted family man",
+    image: "/src/assets/family.jpg",
   },
 ];
 
@@ -48,11 +56,20 @@ export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="py-20 md:py-32 bg-gradient-to-b from-background via-navy-medium to-background relative overflow-hidden">
+    <section
+      id="gallery"
+      className="py-20 md:py-32 bg-gradient-to-b from-background via-navy-medium to-background relative overflow-hidden"
+    >
       {/* Parallax background effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(230,126,34,0.08),transparent_50%)] animate-float" style={{ animationDuration: "20s" }} />
-        <div className="absolute w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(231,76,60,0.06),transparent_50%)] animate-float" style={{ animationDuration: "25s", animationDelay: "2s" }} />
+        <div
+          className="absolute w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(230,126,34,0.08),transparent_50%)] animate-float"
+          style={{ animationDuration: "20s" }}
+        />
+        <div
+          className="absolute w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(231,76,60,0.06),transparent_50%)] animate-float"
+          style={{ animationDuration: "25s", animationDelay: "2s" }}
+        />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -75,17 +92,21 @@ export const Gallery = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => setSelectedImage(index)}
             >
-              {/* Placeholder for image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-navy-medium to-navy-deep flex items-center justify-center">
-                <div className="text-center p-4">
-                  <div className="text-6xl mb-2">📸</div>
-                  <div className="text-sm text-primary font-semibold">{item.year}</div>
-                </div>
-              </div>
-              
+              {/* Image */}
+              <img
+                src={item.image}
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/src/assets/placeholder.jpg"; // Optional: Fallback image
+                }}
+              />
+
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                <h3 className="text-white font-bold text-sm mb-1">{item.title}</h3>
+                <h3 className="text-white font-bold text-sm mb-1">
+                  {item.title}
+                </h3>
                 <p className="text-white/80 text-xs">{item.description}</p>
               </div>
 
@@ -110,17 +131,17 @@ export const Gallery = () => {
           >
             <X className="w-6 h-6 text-white" />
           </button>
-          
+
           <div className="max-w-4xl w-full">
-            <div className="aspect-video bg-gradient-to-br from-navy-medium to-navy-deep rounded-xl flex items-center justify-center mb-6">
-              <div className="text-center p-8">
-                <div className="text-8xl mb-4">📸</div>
-                <div className="text-2xl text-primary font-bold mb-2">
-                  {galleryItems[selectedImage].year}
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
+            <img
+              src={galleryItems[selectedImage].image}
+              alt={galleryItems[selectedImage].title}
+              className="aspect-video w-full rounded-xl object-cover"
+              onError={(e) => {
+                e.currentTarget.src = "/src/assets/placeholder.jpg"; // Optional: Fallback image
+              }}
+            />
+            <div className="text-center mt-6">
               <h3 className="text-2xl font-bold text-white mb-2">
                 {galleryItems[selectedImage].title}
               </h3>
